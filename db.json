@@ -1,0 +1,32 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "foodnm": "pizza",
+      "rate": 175,
+      "quantity": 2,
+      "amount": 350
+    },
+    {
+      "id": 2,
+      "foodnm": "moms",
+      "rate": 80,
+      "quantity": 3,
+      "amount": 240
+    },
+    {
+      "id": 3,
+      "foodnm": "megi",
+      "rate": 150,
+      "quantity": 1,
+      "amount": 150
+    },
+    {
+      "id": "18a7",
+      "foodnm": "monchuriyan ",
+      "rate": 90,
+      "quantity": 2,
+      "amount": 180
+    }
+  ]
+}

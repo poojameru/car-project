@@ -1,0 +1,36 @@
+<div class="container p-3">
+
+    <h2>Food Order</h2>
+    <form #foodeForm="ngForm">
+       <div class="row">
+        <div class=" col-6 mb-3">
+            <label for="exampleInputEmail1" class="form-label">Food Item</label>
+            <input type="text" class="form-control" id="foodnm" [(ngModel)]="formobj.foodnm" name="foodnm">
+          </div>
+          <div class=" col-6 mb-3">
+            <label for="exampleInputEmail1" class="form-label">Food Rate</label>
+            <input type="number" class="form-control" id="rate" name="rate" [(ngModel)]="formobj.rate" required (ngModelChange)="calculateAmount()" min="0">
+          </div>
+       </div>
+
+       <div class="row">
+        <div class=" col-6 mb-3">
+            <label for="exampleInputEmail1" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="formobj.quantity" required (ngModelChange)="calculateAmount()" min="1">
+          </div>
+          <div class=" col-6 mb-3">
+            <label for="exampleInputEmail1" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" name="amount" [(ngModel)]="formobj.amount"  readonly>
+          </div>
+        </div>
+
+        <div *ngIf="!isEdited">
+             <button type="submit" class="btn btn-primary" (click)="onsubmit(foodeForm)">Submit</button>
+        </div>
+
+        <div *ngIf="isEdited">
+        <button type="submit" class="btn btn-primary" (click)="update_page()">Update</button>
+        </div>
+    
+    </form>
+</div>
